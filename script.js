@@ -22,7 +22,7 @@ function compute()
             alert("Enter a positive number greater than 0");
             document.getElementById("principal").focus();
         }
-    }
+    
 
 
 
