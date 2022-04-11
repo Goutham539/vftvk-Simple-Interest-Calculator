@@ -1,8 +1,8 @@
 function compute()
 {
-    var principal = parseFloat(document.getElementById("principal").value);
-    var rate = parseFloat(document.getElementById("rate").value);
-    var years = parseFloat(document.getElementById("years").value);
+    var principal = document.getElementById("principal").value;
+    var rate = document.getElementById("rate").value;
+    var years = document.getElementById("years").value;
     var result = principal * years * rate /100;
     var final_year = new Date().getFullYear()+parseInt(years);
 
@@ -10,7 +10,7 @@ function compute()
     +principal+",\<br\>at an interest rate of "
     +rate+"%\<br\>You will receive an amount of "
     +result+",\<br\>in the year "+final_year+"\<br\>"
-
+}
     function updateRate(){
         var rateval = document.getElementById("rate").value;
         document.getElementById("rate_val").innerText=rateval;   
@@ -23,6 +23,6 @@ function compute()
             document.getElementById("principal").focus();
         }
     }
-}
 
-        
+
+
