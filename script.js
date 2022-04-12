@@ -9,8 +9,7 @@ function compute()
     var final_year = new Date().getFullYear()+parseInt(years);
 
     // Showing result in form of a paragraph 
-    document.getElementById("result").innerHTML="If you deposit "+principal+",\<br\>at an interest rate of "
-    +rate+"%\<br\>You will receive an amount of "+result+",\<br\>in the year "+final_year+"\<br\>"
+    document.getElementById("result").innerHTML="If you deposit <mark>"+principal+",</mark>\<br\>at an interest rate of <mark>"+rate+"</mark>%\<br\>You will receive an amount of <mark>"+result+"</mark>,\<br\>in the year <mark>"+final_year+"</mark>\<br\>"
 }
     
     // Function updateRate is used to show the rate selected by slider dynamically.
@@ -22,12 +21,8 @@ function compute()
     //CheckAmount function checks if the principal amount entered by user is greater than 0 or not.
     function checkAmount(){
         var principal = document.getElementById("principal").value;
-        if(principal<=0){
+        if(principal<=0 || principal==null){
             alert("Enter a positive number greater than 0");
             document.getElementById("principal").focus();
         }
     }
-    
-
-
-
